@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wolt_modal_sheet/src/content/components/paginating_group/wolt_modal_sheet_page_transition_state.dart';
 import 'package:wolt_modal_sheet/wolt_modal_sheet.dart';
-import 'package:wolt_modal_sheet/src/widgets/pixel_slide_transition.dart';
 
 class MainContentAnimatedBuilder extends StatefulWidget {
   final AnimationController controller;
@@ -71,7 +70,7 @@ class _MainContentAnimatedBuilderState
             opacity: pageTransitionState
                 .mainContentOpacity(controller, widget.paginationAnimationStyle)
                 .value,
-            child: PixelSlideTransition(
+            child: SlideTransition(
               position: pageTransitionState.mainContentSlidePosition(
                 controller,
                 widget.paginationAnimationStyle,
